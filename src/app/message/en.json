@@ -1,0 +1,18 @@
+{
+  "Home": {
+    "title": "Hi, I’m Poorva Dharshan",
+    "subtitle": "A passionate full-stack developer crafting digital experiences."
+  },
+  "About": {
+    "title": "About Me",
+    "description": "I am a full-stack developer with a passion for building web applications that are not only functional but also user-friendly. My journey in tech has been driven by a love for problem-solving and continuous learning."
+  },
+  "Contact": {
+    "title": "Get in Touch",
+    "description": "Feel free to reach out if you have any questions or just want to connect!"
+  },
+  "Blog": {
+    "title": "My Blog",
+    "description": "Check out my latest articles on web development, programming, and technology."
+  }
+}
