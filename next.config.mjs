@@ -11,6 +11,7 @@ const withNextIntl = createNextIntlPlugin('./src/app/i18n/request.ts', {
 });
 
 export default withNextIntl({
+   output: 'export',
   experimental: {
     serverActions: {}
   },
