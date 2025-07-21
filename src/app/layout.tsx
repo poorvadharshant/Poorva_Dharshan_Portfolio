@@ -16,32 +16,24 @@ export const metadata: Metadata = {
   description: 'Professional developer portfolio using Next.js',
 };
 
-export default async function LocaleLayout({
+export default function RootLayout({
   children,
-  params: { locale },
 }: {
   children: ReactNode;
-  params: { locale: string };
 }) {
-  // const messages = (await import(`./message/${locale}.json`)).default;
-
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen flex flex-col bg-white text-gray-900 dark:bg-gray-950 dark:text-white">
-        {/* <NextIntlClientProvider locale={locale} messages={messages}> */}
         <ThemeProvider>
           <Suspense fallback={<div>Loading...</div>}>
             <Loader />
           </Suspense>
-          {/* <Header /> */}
           <Navbar />
           <main className="flex-1 px-4 pt-24 pb-8 max-w-5xl mx-auto w-full">
             {children}
           </main>
-          {/* <BottomMenu /> */}
           <Footer />
         </ThemeProvider>
-        {/* </NextIntlClientProvider> */}
       </body>
     </html>
   );
