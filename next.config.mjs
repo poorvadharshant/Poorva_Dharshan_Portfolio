@@ -15,6 +15,6 @@ export default withNextIntl({
     serverActions: {}
   },
   images: {
-    domains: ['example.com']
+    domains: []
   }
 });
