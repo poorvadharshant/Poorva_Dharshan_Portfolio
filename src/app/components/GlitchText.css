@@ -1,0 +1,36 @@
+.glitch-seq-text {
+    font-family: 'Courier New', monospace;
+    font-size: 2.5rem;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.glitch-char {
+    display: inline-block;
+    opacity: 0;
+    animation: glitchCharFade 0.6s forwards;
+    animation-timing-function: steps(1, end);
+}
+
+@keyframes glitchCharFade {
+    0% {
+        opacity: 0;
+        transform: scaleY(1.3);
+        filter: blur(2px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scaleY(0.8);
+        filter: blur(1px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+        filter: blur(0);
+    }
+}

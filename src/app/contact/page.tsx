@@ -8,34 +8,51 @@ const contacts = [
   {
     icon: <Phone className="w-6 h-6" />,
     title: 'Phone',
-    subtitle: '+1 (123) 456-7890',
-    href: 'tel:+11234567890',
+    subtitle: '+91 9789106285',
+    href: 'tel:+919789106285',
   },
   {
     icon: <Mail className="w-6 h-6" />,
-    title: 'Email',
-    subtitle: 'you@example.com',
-    href: 'mailto:you@example.com',
+    title: 'Gmail',
+    subtitle: 'poorvadharshaneee@gmail.com',
+    href: 'poorvadharshaneee@gmail.com',
   },
   {
     icon: <Github className="w-6 h-6" />,
     title: 'GitHub',
-    subtitle: '@yourgithub',
-    href: 'https://github.com/yourgithub',
+    subtitle: '@poorvadharshant',
+    href: 'https://poorvadharshant.github.io/Poorva_Dharshan_Portfolio/',
   },
   {
     icon: <Linkedin className="w-6 h-6" />,
     title: 'LinkedIn',
-    subtitle: 'linkedin.com/in/yourlinkedin',
-    href: 'https://linkedin.com/in/yourlinkedin',
+    subtitle: 'linkedin.com/in/poorva-dharshan-t',
+    href: 'https://linkedin.com/in/poorva-dharshan-t',
   },
   {
     icon: <FileText className="w-6 h-6" />,
     title: 'Resume',
     subtitle: 'View My CV',
-    href: '/resume.pdf',
+    href: './resume.pdf',
   },
 ];
+function getHoverMessage(title: string): string {
+  switch (title.toLowerCase()) {
+    case 'phone':
+      return 'Click to call';
+    case 'email':
+      return 'Click to send an email';
+    case 'github':
+      return 'Click to view GitHub';
+    case 'linkedin':
+      return 'Click to view LinkedIn profile';
+    case 'resume':
+      return 'Click to view or download resume';
+    default:
+      return 'Click to open';
+  }
+}
+
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -65,7 +82,8 @@ function ContactCard({ icon, title, subtitle, href, index }: ContactCardProps) {
       animate="visible"
       variants={cardVariants}
       aria-label={`Link to ${title}`}
-      className="flex items-center p-5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-105"
+      title={getHoverMessage(title)}
+      className="flex items-center p-5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md transition duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-blue-100 hover:to-violet-100 dark:hover:from-blue-900 dark:hover:to-violet-900 hover:shadow-[0_0_20px_4px_rgba(139,92,246,0.5)] dark:hover:shadow-[0_0_20px_4px_rgba(147,197,253,0.3)]"
     >
       <div className="mr-4 p-3 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full transition-transform duration-300 hover:scale-110">
         {icon}

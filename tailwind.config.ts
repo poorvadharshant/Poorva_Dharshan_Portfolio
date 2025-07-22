@@ -25,6 +25,18 @@ const config: Config = {
       },
       animation: {
         'spin-slow': 'spin 2s linear infinite',
+        bloom: 'bloom 0.4s ease-out forwards',
+        'reverse-bloom': 'reverseBloom 0.3s ease-in forwards',
+      },
+      keyframes: {
+        bloom: {
+          '0%': { opacity: '0', transform: 'scale(0.85)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        reverseBloom: {
+          '0%': { opacity: '1', transform: 'scale(1)' },
+          '100%': { opacity: '0', transform: 'scale(0.85)' },
+        },
       },
     },
   },
