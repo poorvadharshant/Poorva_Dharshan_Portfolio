@@ -33,7 +33,7 @@ const contacts = [
     icon: <FileText className="w-6 h-6" />,
     title: 'Resume',
     subtitle: 'View My CV',
-    href: './resume.pdf',
+    href: './PoorvaDharshan_Resume.pdf',
   },
 ];
 function getHoverMessage(title: string): string {

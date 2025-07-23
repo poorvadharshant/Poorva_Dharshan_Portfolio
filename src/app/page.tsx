@@ -22,7 +22,11 @@ export default function Home() {
     "UI/UX Principles",
     "Performance Optimization",
     "Animation (Framer Motion / GSAP)",
-    "Team Collaboration & Agile Workflow"
+    "Team Collaboration & Agile Workflow",
+    "AI & ML (OpenAI API, TensorFlow, NLP, Prompt Engineering)",
+    "AI Integration (OpenAI API, Chatbot Development, Intelligent UI)",
+    "AI/ML Development (Python, Scikit-learn, Deep Learning, LLMs)",
+    "LangChain (LLM Orchestration, Tool Integration, Prompt Templates)"
   ];
   return (
     <section className="space-y-12 text-center">
@@ -65,13 +69,28 @@ export default function Home() {
           </div>
           {/* Hi, I&apos;m Poorva Dharshan */}
         </motion.h1>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.6, duration: 0.7 }}
+        >
+          <Image
+            src="./banner.png"
+            alt="Poorva Dharshan Banner"
+            width={1200}
+            height={500}
+            className="rounded-xl shadow-xl mx-auto"
+            priority
+          />
+        </motion.div>
         <motion.section
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="bg-white dark:bg-gray-900 py-12 px-6 md:px-12"
         >
-          <div className="max-w-4xl mx-auto">
+
+          <div style={{ backgroundColor: "rgb(244 244 244) " }} className="max-w-4xl mx-auto bg-white/10 dark:bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 p-8">
             <motion.h2
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -82,7 +101,7 @@ export default function Home() {
             </motion.h2>
 
             <motion.p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-              Hi, I&apos;m a <span className="font-semibold">Front-End Developer</span> with over 5 years of experience crafting fast, accessible, and visually engaging web apps. I specialize in building clean UIs using <span className="text-blue-600">React</span>, <span className="text-blue-600">TypeScript</span>, and <span className="text-blue-600">Tailwind CSS</span>.
+              Hi, I&apos;m a <span className="font-semibold">Front-End Developer</span> with over 5+ years of experience crafting fast, accessible, and visually engaging web apps. I specialize in building clean UIs using <span className="text-blue-600">React</span>, <span className="text-blue-600">TypeScript</span>, and <span className="text-blue-600">Tailwind CSS</span>.
             </motion.p>
 
             <motion.p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mt-4">
@@ -115,6 +134,7 @@ export default function Home() {
               — always open to exciting opportunities!
             </motion.p>
           </div>
+
         </motion.section>
 
         {/* <motion.p
@@ -130,20 +150,7 @@ export default function Home() {
           I build accessible, fast and visually engaging web experiences using
           modern tech like React, Next.js, Tailwind CSS and Framer Motion.
         </motion.p> */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.6, duration: 0.7 }}
-        >
-          <Image
-            src="/banner.png"
-            alt="Poorva Dharshan Banner"
-            width={1200}
-            height={500}
-            className="rounded-xl shadow-xl mx-auto"
-            priority
-          />
-        </motion.div>
+
 
       </section>
       <section id="skill">
@@ -184,7 +191,7 @@ export default function Home() {
 
       <section id="resume">
         <Link
-          href="/resume.pdf"
+          href="./PoorvaDharshan_Resume.pdf"
           download
           className="inline-block mt-8 px-6 py-3 rounded bg-blue-600 text-white font-medium hover:bg-blue-700"
         >
