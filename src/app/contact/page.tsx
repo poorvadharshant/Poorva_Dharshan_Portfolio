@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, FileText, Phone } from 'lucide-react';
+import { Mail, Github, Linkedin, FileText, Phone,Code } from 'lucide-react';
 import React from 'react';
 
 const contacts = [
@@ -34,6 +34,12 @@ const contacts = [
     title: 'Resume',
     subtitle: 'View My CV',
     href: './PoorvaDharshan_Resume.pdf',
+  },
+   {
+    icon: <Code className="w-6 h-6" />,
+    title: 'Projects Demo',
+    subtitle: 'Vercel Demo',
+    href: 'https://myproject-vert-six.vercel.app',
   },
 ];
 function getHoverMessage(title: string): string {

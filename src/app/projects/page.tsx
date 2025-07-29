@@ -442,6 +442,48 @@ const projectss = [
 
 
 ];
+const projectDemo = [
+  {
+    label: "AI + Chat App",
+    title: "SmartChat Hub",
+    description: "A full-stack app with real-time chat, AI chatbot, secure auth, and blog generation.",
+    fullContent: (
+      <div>
+        <h2>About SmartChat Hub</h2>
+        <p>
+          SmartChat Hub is a powerful web application combining real-time messaging, AI chat interaction,
+          blog content generation, and secure user authentication — all in one platform.
+        </p>
+
+        <h3>Key Features:</h3>
+        <ul>
+          <li>🔒 User registration & login with secure authentication</li>
+          <li>💬 Real-time chat like WhatsApp (user-to-user)</li>
+          <li>🤖 AI-powered chatbot for instant Q&A or casual chat</li>
+          <li>📝 AI blog generator — enter a topic, get a full article</li>
+        </ul>
+
+        <h3>Technologies Used:</h3>
+        <p>React, nextAuth, Node.js, Socket.io, OpenAI API, Tailwind CSS</p>
+
+        <h3>Demo :</h3>
+        <ul>
+          <li>
+            <a
+              href="https://myproject-vert-six.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red-600 hover:text-red-800 font-semibold no-underline"
+            >
+              🔗 Live Demo
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    )
+  }
+];
 export default function ProjectsPage() {
   // const [isDialogOpen, setDialogOpen] = useState(false)  // State for Dialog
   // const [selectedProject, setSelectedProject] = useState<Project | null>(null)
@@ -468,6 +510,19 @@ export default function ProjectsPage() {
       <h1 className="text-4xl font-bold text-primary">Projects</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
         {projectss.map((project, index) => (
+          <Card
+            key={index}
+            label={project.label}
+            title={project.title}
+            description={project.description}
+            type="left"
+            fullContent={project.fullContent}
+          />
+        ))}
+      </div>
+      <h1 className="text-4xl font-bold text-primary"> Demo</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+        {projectDemo.map((project, index) => (
           <Card
             key={index}
             label={project.label}
